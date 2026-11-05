@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    //Specifies the JavaScript language version for compilation
+    "target": "ES2022",
+
+    //Uses CommonJS module format for Node.js compatibility
+    "module": "CommonJS",
+
+    //Resolves imported modules using Node.js module resolution rules
+    "moduleResolution": "Node",
+
+    //Enables strict type-checking to catch potential errors
+    "strict": true,
+
+    //Allows default imports from modules that use CommonJS exports
+    "esModuleInterop": true,
+
+    //Skips type-checking of declaration files from external libraries
+    "skipLibCheck": true,
+
+    //Includes Node.js and Playwright types for TypeScript support
+    "types": ["node", "@playwright/test"]
+  },
+
+  //Specifies the TypeScript files included in the project.
+  //Includes test files, Page Object classes, custom fixtures and the Playwright configuration file
+  "include": ["tests/**/*.ts", "pages/**/*.ts", "fixtures/**/*.ts", "playwright.config.ts"]
+}
