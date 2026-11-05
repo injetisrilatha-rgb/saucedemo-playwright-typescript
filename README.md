@@ -87,6 +87,7 @@ Visual Studio Code or another TypeScript editor
 Verify the installation:
 
 node --version
+
 npm --version
 
 ## 6. Installation
