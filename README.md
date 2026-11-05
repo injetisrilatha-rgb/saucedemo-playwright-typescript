@@ -43,7 +43,6 @@ The following scenarios are implemented:
 
 ## 4. Project Structure
 
-```text
 saucedemo-playwright-assignment/
 │
 ├── data/
@@ -69,22 +68,24 @@ saucedemo-playwright-assignment/
 ├── tsconfig.json
 ├── .gitignore
 └── README.md
-```
+
 
 ## 5. Prerequisites
 
-The following tools are required:
+The following tools are required to run this project:
 
-- Node.js (LTS version recommended; Node.js 20 or later)
-- npm
-- Visual Studio Code or another TypeScript editor
+Node.js (version 20 or later; LTS version recommended)
+
+npm (included with Node.js)
+
+Google Chrome browser installed locally
+
+Visual Studio Code or another TypeScript editor
 
 Verify the installation:
 
-```powershell
 node --version
 npm --version
-```
 
 ## 6. Installation
 
@@ -92,55 +93,32 @@ Clone the repository or open the project directory in a terminal.
 
 Install project dependencies:
 
-```powershell
 npm install
-```
 
 **Note:** This project uses the locally installed Google Chrome browser through the `channel: 'chrome'` setting in `playwright.config.ts`. A separate Playwright-managed Chromium installation is not required for the current configuration.
 
 ## 7. Test Execution
 
 Run all tests:
-
-```powershell
-npx.cmd playwright test
-```
+npx playwright test
 
 Run tests with a visible browser:
-
-```powershell
-npx.cmd playwright test --headed
-```
+npx playwright test --headed
 
 Run tests using the Chromium project:
-
-```powershell
-npx.cmd playwright test --project=chromium
-```
+npx playwright test --project=chromium
 
 Run tests with one worker:
-
-```powershell
-npx.cmd playwright test --project=chromium --workers=1
-```
+npx playwright test --project=chromium --workers=1
 
 Open Playwright UI mode:
-
-```powershell
-npx.cmd playwright test --ui
-```
+npx playwright test --ui
 
 Open the HTML report:
-
-```powershell
-npx.cmd playwright show-report
-```
+npx playwright show-report
 
 If the default report port is already in use:
-
-```powershell
-npx.cmd playwright show-report --port 9324
-```
+npx playwright show-report --port 9324
 
 On Windows PowerShell environments where npm or npx script execution is restricted, use `npm.cmd` and `npx.cmd` instead.
 
@@ -154,6 +132,8 @@ On Windows PowerShell environments where npm or npx script execution is restrict
 | Passed | 9 |
 | Failed | 0 |
 | Skipped | 0 |
+| Browser | Google Chrome |
+| Execution mode | Headed |	
 | Execution time | 6.9 seconds |
 
 All nine automated test cases passed successfully in the configured Google Chrome browser.
@@ -184,9 +164,7 @@ The `loggedInInventory` fixture performs the login operation and verifies that t
 
 ### Browser Context Isolation
 
-Playwright's built-in `page` fixture creates a separate browser context for each test.
-
-This provides independent cookies, local storage, and session state, preventing cart and authentication state from leaking between tests.
+Playwright's built-in page fixture runs each test in an isolated browser context, providing independent cookies, local storage, and session state.
 
 ### Assertions and Synchronization
 
@@ -247,22 +225,11 @@ Potential improvements include:
 - CI/CD integration using GitHub Actions.
 - Environment-specific configuration and secure credential management.
 
-## 13. Git command-line submission (if Git is installed)
+## 13. Repository Information
 
-Suggested repository name:
+GitHub Repository:`saucedemo-playwright-typescript`
 
-`saucedemo-playwright-typescript`
-
-Initialize and upload the project:
-
-```powershell
-git init
-git add .
-git commit -m "Add SauceDemo Playwright TypeScript automation"
-git branch -M main
-git remote add origin https://github.com/injetisrilatha-rgb/saucedemo-playwright-typescript.git
-git push -u origin main
-```
+The project source code, test scripts, configuration files, and documentation are maintained in this GitHub repository.
 
 ## 14. Assignment Summary
 
