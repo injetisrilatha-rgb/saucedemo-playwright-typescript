@@ -43,6 +43,7 @@ The following scenarios are implemented:
 
 ## 4. Project Structure
 
+```text
 saucedemo-playwright-assignment/
 │
 ├── data/
@@ -68,6 +69,7 @@ saucedemo-playwright-assignment/
 ├── tsconfig.json
 ├── .gitignore
 └── README.md
+```
 
 
 ## 5. Prerequisites
